@@ -47,7 +47,7 @@ The output should look similar to this:
 
 > Instructions are the same as recent Windows versions. Launch the Terminal app and continue from step 2.
 
-#### USB
+#### USB (iproxy)
 
 1. Launch the Terminal app.
 2. Install Homebrew using this command: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`. Press return after pasting it.
@@ -62,4 +62,61 @@ The output should look similar to this:
 
 ### Linux
 
+#### Wi-Fi (LAN)
+
+> Instructions are the same as macOS/recent Windows. Launch a terminal emulator and continue from step 2.
+
+#### USB (usbmuxd+iproxy)
+
+ > Instructions are similar for both wifi and usb compared to macOS. Except that you should install libimobiledevice and usbmuxd with your existing package manager.
+
+   Run `usbmuxd` in a terminal before trying to run `iproxy`.
+
 <h2 align=center> How to SFTP </h2>
+
+SFTP allows you to access files on your devices. More powerful than iTunes and better for bulk file transfers.
+
+### CLI (command line)
+
+> Command line SFTP is for advanced users only. Follow the same instructions as SSH but replace `ssh` with `sftp`.
+
+### Cross-Platform (GUI)
+
+#### FileZilla
+
+1. Get the latest release of FileZilla from the [website](https://filezilla-project.org/).
+2. Launch the application.
+3. If you're using Wi-Fi (LAN), enter your device's ip as the host, `root` as the username, and `alpine` as the password before clicking quickconnect.
+
+If not, follow USB instructions for ssh above, but don't ssh into your device. Enter 2222 as the port and localhost as the host before clicking quickconnect.
+
+If done properly, the files should be listed on the right side of Filezilla's window.
+
+### macOS/Windows (GUI)
+
+#### Cyberduck
+
+1. Get Cyberduck from their [website](https://cyberduck.io/download/).
+2. After installation, run it and Click "New Connection"
+3. For WiFi connections: server is your device's ip address. Username is `root`. Default password is `alpine`
+  3a. USB connections should have the port set to what was used in the iproxy commands above (2222). Server should be localhost.
+
+### Windows Only (GUI)
+
+#### SSHFS-Win (Recommended)
+
+> These instructions may seem complex at first, but the end result is having your device appear in File Explorer.
+
+1. Install the latest (stable) release of [WinFSP](https://github.com/billziss-gh/winfsp).
+2. Install [SSHFS-Win](https://github.com/billziss-gh/sshfs-win/releases). Choose the x64 or x86 installer according to your computer's architecture.
+3. Install [SSFS-Win Manger](https://github.com/evsar3/sshfs-win-manager/releases/latest)
+4. Setup your connections in SSHFS-Win Manager with the same data as SSH-ing would use.
+
+#### WinSCP
+
+1. Get the latest WinSCP release from [here](https://winscp.net/eng/download.php).
+2. Launch it and enter your login details, following the same format as SSH-ing above. Then click Login.
+3. If done correctly, you should see your files appear in a new window.
+
+
+
