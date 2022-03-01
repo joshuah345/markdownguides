@@ -5,8 +5,7 @@
 - A jailbroken iOS Device
 - A functional PC that's connected to the same WiFi network as your device.
   - This does not apply if you're connecting over USB.
-- **OpenSSH installed on your device.**
-  - `openssh-server` on Procursus and `openssh` on Elucubratus 
+- **OpenSSH (package) installed on your device.** 
 
 <h2 align=center> How to SSH </h2>
 
