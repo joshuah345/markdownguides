@@ -1,5 +1,26 @@
 # How to SSH/SFTP into iOS Devices
 
+
+- [How to SSH/SFTP into iOS Devices](#how-to-sshsftp-into-ios-devices)
+  - [Prerequisites](#prerequisites)
+  - [Windows](#windows)
+      - [Over Wi-Fi](#over-wi-fi)
+      - [USB](#usb)
+    - [macOS](#macos)
+      - [Wi-Fi](#wi-fi)
+      - [USB (iproxy)](#usb-iproxy)
+    - [Linux](#linux)
+      - [Wi-Fi (LAN)](#wi-fi-lan)
+      - [USB (usbmuxd+iproxy)](#usb-usbmuxdiproxy)
+    - [CLI (command line)](#cli-command-line)
+    - [Cross-Platform (GUI)](#cross-platform-gui)
+      - [FileZilla](#filezilla)
+    - [macOS/Windows (GUI)](#macoswindows-gui)
+      - [Cyberduck](#cyberduck)
+    - [Windows Only (GUI)](#windows-only-gui)
+      - [SSHFS-Win (Recommended)](#sshfs-win-recommended)
+      - [WinSCP](#winscp)
+
 ## Prerequisites
 
 - A jailbroken iOS Device
@@ -14,7 +35,6 @@
 <h3 align=center> Using cmd (Command Prompt) </h3>
 
 > Note: This section only applies if you're using the Windows 10 Spring update or newer.
-
 
 #### Over Wi-Fi
 
@@ -36,6 +56,7 @@ The output should look similar to this:
 3. Launch Command Prompt (cmd)
 4. Drag usbmuxd.exe to it. Press return.
 5. Open a second command prompt window and drag Drag iproxy.exe to it. Type `2222 22` after it.`iproxy.exe 2222 22`
+   5a. If you are using checkra1n, use 44 instead of 22.
 6. The output will should like this: ![iproxy in terminal](assets/iproxied.png)
 7. Open a third command prompt window and type `ssh root@localhost -p 2222`
 8. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
@@ -56,7 +77,8 @@ The output should look similar to this:
 6. Connect your iOS device using a cable.
 7. Open a new terminal window using Command+N
 8. In the new window, type: `iproxy 2222 22` and press return. The output should look like this: ![iproxy in terminal](assets/iproxied.png)
-9. Go back to the old terminal window and type `ssh root@localhost -p 2222`
+   8a. if you are using checkra1n, use port 44 instead of 22.
+9.  Go back to the old terminal window and type `ssh root@localhost -p 2222`
 10. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
 
 ### Linux
@@ -116,6 +138,3 @@ If done properly, the files should be listed on the right side of Filezilla's wi
 1. Get the latest WinSCP release from [here](https://winscp.net/eng/download.php).
 2. Launch it and enter your login details, following the same format as SSH-ing above. Then click Login.
 3. If done correctly, you should see your files appear in a new window.
-
-
-
