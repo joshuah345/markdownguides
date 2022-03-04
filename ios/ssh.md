@@ -56,7 +56,7 @@ The output should look similar to this:
 3. Launch Command Prompt (cmd)
 4. Drag usbmuxd.exe to it. Press return.
 5. Open a second command prompt window and drag Drag iproxy.exe to it. Type `2222 22` after it.`iproxy.exe 2222 22`
-  5a. If you are using checkra1n, use 44 instead of 22.
+    5a. If you are using checkra1n, use 44 instead of 22.
 6. The output will should like this: ![iproxy in terminal](assets/iproxied.png)
 7. Open a third command prompt window and type `ssh root@localhost -p 2222`
 8. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
@@ -77,9 +77,9 @@ The output should look similar to this:
 6. Connect your iOS device using a cable.
 7. Open a new terminal window using Command+N
 8. In the new window, type: `iproxy 2222 22` and press return. The output should look like this: ![iproxy in terminal](assets/iproxied.png)
-  8a. if you are using checkra1n, use port 44 instead of 22.
-9. Go back to the old terminal window and type `ssh root@localhost -p 2222`
-10. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
+    8a. if you are using checkra1n, use port 44 instead of 22.
+10. Go back to the old terminal window and type `ssh root@localhost -p 2222`
+11. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
 
 ### Linux
 
