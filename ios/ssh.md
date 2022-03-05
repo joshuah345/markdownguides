@@ -1,17 +1,19 @@
 # How to SSH/SFTP into iOS Devices
 
-
 - [How to SSH/SFTP into iOS Devices](#how-to-sshsftp-into-ios-devices)
   - [Prerequisites](#prerequisites)
+  - [How to SSH](#how-to-ssh)
   - [Windows](#windows)
+    - [Using cmd (Command Prompt)](#using-cmd-command-prompt)
       - [Over Wi-Fi](#over-wi-fi)
       - [USB](#usb)
-    - [macOS](#macos)
+  - [macOS](#macos)
       - [Wi-Fi](#wi-fi)
       - [USB (iproxy)](#usb-iproxy)
-    - [Linux](#linux)
+  - [Linux](#linux)
       - [Wi-Fi (LAN)](#wi-fi-lan)
       - [USB (usbmuxd+iproxy)](#usb-usbmuxdiproxy)
+  - [How to SFTP](#how-to-sftp)
     - [CLI (command line)](#cli-command-line)
     - [Cross-Platform (GUI)](#cross-platform-gui)
       - [FileZilla](#filezilla)
@@ -28,11 +30,11 @@
   - This does not apply if you're connecting over USB.
 - **OpenSSH (package) installed on your device.** 
 
-<h2 align=center> How to SSH </h2>
+## How to SSH
 
 ## Windows
 
-<h3 align=center> Using cmd (Command Prompt) </h3>
+### Using cmd (Command Prompt)
 
 > Note: This section only applies if you're using the Windows 10 Spring update or newer.
 
@@ -61,7 +63,7 @@ The output should look similar to this:
 7. Open a third command prompt window and type `ssh root@localhost -p 2222`
 8. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
 
-### macOS
+## macOS
 
 #### Wi-Fi
 
@@ -81,7 +83,7 @@ The output should look similar to this:
 9. Go back to the old terminal window and type `ssh root@localhost -p 2222`
 10. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
 
-### Linux
+## Linux
 
 #### Wi-Fi (LAN)
 
@@ -93,7 +95,7 @@ The output should look similar to this:
 
    Run `usbmuxd` in a terminal before trying to run `iproxy`.
 
-<h2 align=center> How to SFTP </h2>
+## How to SFTP
 
 SFTP allows you to access files on your devices. More powerful than iTunes and better for bulk file transfers.
 
