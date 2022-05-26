@@ -1,27 +1,11 @@
 # How to SSH/SFTP into iOS Devices
 
-- [How to SSH/SFTP into iOS Devices](#how-to-sshsftp-into-ios-devices)
-  - [Prerequisites](#prerequisites)
-  - [How to SSH](#how-to-ssh)
-  - [Windows](#windows)
-    - [Using cmd (Command Prompt)](#using-cmd-command-prompt)
-      - [Over Wi-Fi](#over-wi-fi)
-      - [USB](#usb)
-  - [macOS](#macos)
-      - [Wi-Fi](#wi-fi)
-      - [USB (iproxy)](#usb-iproxy)
-  - [Linux](#linux)
-      - [Wi-Fi (LAN)](#wi-fi-lan)
-      - [USB (usbmuxd+iproxy)](#usb-usbmuxdiproxy)
-  - [How to SFTP](#how-to-sftp)
-    - [CLI (command line)](#cli-command-line)
-    - [Cross-Platform (GUI)](#cross-platform-gui)
-      - [FileZilla](#filezilla)
-    - [macOS/Windows (GUI)](#macoswindows-gui)
-      - [Cyberduck](#cyberduck)
-    - [Windows Only (GUI)](#windows-only-gui)
-      - [SSHFS-Win (Recommended)](#sshfs-win-recommended)
-      - [WinSCP](#winscp)
+| Table of Contents               |
+| ------------------------------- |
+| [Prerequisites](#prerequisites) |
+| [How to SSH](#how-to-ssh) ([Windows](#windows) \| [macOS](#macos) \| [Linux](#linux)\) |
+| [How to SFTP](#how-to-sftp)              |
+
 
 ## Prerequisites
 
@@ -59,7 +43,7 @@ The output should look similar to this:
 4. Drag usbmuxd.exe to it. Press return.
 5. Open a second command prompt window and drag Drag iproxy.exe to it. Type `2222 22` after it.`iproxy.exe 2222 22`
     - If you are using checkra1n, use 44 instead of 22.
-6. The output will should like this: ![iproxy in terminal](assets/iproxied.png)
+6. The output will should like this: ![iproxy in terminal](assets/ssh/iproxied.png)
 7. Open a third command prompt window and type `ssh root@localhost -p 2222`
 8. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
 
@@ -78,7 +62,7 @@ The output should look similar to this:
 5. run `brew install libimobiledevice`
 6. Connect your iOS device using a cable.
 7. Open a new terminal window using Command+N
-8. In the new window, type: `iproxy 2222 22` and press return. The output should look like this: ![iproxy in terminal](assets/iproxied.png)
+8. In the new window, type: `iproxy 2222 22` and press return. The output should look like this: ![iproxy in terminal](assets/ssh/sshclioutput.png/iproxied.png)
    - If you are using checkra1n, use port 44 instead of 22.  
 9. Go back to the old terminal window and type `ssh root@localhost -p 2222`
 10. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
@@ -122,7 +106,7 @@ If done properly, the files should be listed on the right side of Filezilla's wi
 1. Get Cyberduck from their [website](https://cyberduck.io/download/).
 2. After installation, run it and Click "New Connection"
 3. For WiFi connections: server is your device's ip address. Username is `root`. Default password is `alpine`
-  3a. USB connections should have the port set to what was used in the iproxy commands above (2222). Server should be localhost.
+   USB connections should have the port set to what was used in the iproxy commands above (2222). Server should be localhost.
 
 ### Windows Only (GUI)
 
