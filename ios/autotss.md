@@ -10,8 +10,9 @@
 
 > Add a device with the specified name.
 
-When the command is entered, you will recieve this modal dialog: 
-<img src="assets/autotss/addmodal.png" width=50%>
+When the command is entered, you will recieve this modal dialog:
+
+ <img src="assets/autotss/addmodal.png" width=50%>
 
 ### Filling out the Fields
 ---
@@ -36,7 +37,9 @@ install NonceSet143 from [ichitaso's repo](https://cydia.ichitaso.com)
 
 **If you are on a non-checkra1n jailbreak on iOS 14, You will need to install `libkrw` (unc0ver) or `libkernrw0` (Taurine).**
 
-After installing, you should have a new app on your home screen. Launching it should display something similar to this: <img src="assets/autotss/nonceset143.png" width=60%> 
+After installing, you should have a new app on your home screen. Launching it should display something similar to this:
+
+ <img src="assets/autotss/nonceset143.png" width=60%> 
 
 This application has all the info required for AutoTSS.
 1. Your Device Identifier is the text to the left of your iOS Version
