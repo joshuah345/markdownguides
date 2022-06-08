@@ -33,9 +33,11 @@ Download and install blobsaver from [here.](https://github.com/airsquared/blobsa
 
 #### Jailbroken Devices
 
-install NonceSet143 from [ichitaso's repo](https://cydia.ichitaso.com)
+Install NonceSet143 from [ichitaso's repo](https://cydia.ichitaso.com)
 
 **If you are on a non-checkra1n jailbreak on iOS 14, You will need to install `libkrw` (unc0ver) or `libkernrw0` (Taurine).**
+
+> **Warning: NonceSet143 will not be able to retrieve or set your nonce generator or APNonce on iOS 14.6-14.8 using unc0ver. Use blobsaver to fetch them instead. All other info should work fine.**
 
 After installing, you should have a new app on your home screen. Launching it should display something similar to this:
 
