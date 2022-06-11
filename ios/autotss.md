@@ -2,7 +2,7 @@
 
 [AutoTSS](https://github.com/m1stadev/AutoTSS) is a Discord bot by m1stadev that can automatically save SHSH blobs for your devices. 
 
-> This bot is available in the r/Jailbreak Discord as `AutoTSS#9216`
+> This bot is available in the r/Jailbreak Discord as `AutoTSS#9216`. You must share a server with AutoTSS for it to save your blobs automatically.
 
 ## Adding a Device
 
@@ -23,7 +23,7 @@ When the command is entered, you will recieve this modal dialog:
 3. `Device String` is your Device Identifier.
 4. `Device Id` will be your device's board config.
 
-Download and install blobsaver from [here.](https://github.com/airsquared/blobsaver/releases)
+Next, download and install blobsaver from [here.](https://github.com/airsquared/blobsaver/releases)
 
 > Using this program, you can also save blobs to your own computer and TSS Saver as an alternative to AutoTSS.
 
@@ -33,7 +33,7 @@ Download and install blobsaver from [here.](https://github.com/airsquared/blobsa
 
 #### Jailbroken Devices
 
-Install NonceSet143 from [ichitaso's repo](https://cydia.ichitaso.com)
+Install NonceSet143 from [ichitaso's repo.](https://cydia.ichitaso.com)
 
 **If you are on a non-checkra1n jailbreak on iOS 14, You will need to install `libkrw` (unc0ver) or `libkernrw0` (Taurine).**
 
@@ -45,7 +45,7 @@ After installing, you should have a new app on your home screen. Launching it sh
 
 This application has all the info required for AutoTSS.
 1. Your Device Identifier is the text to the left of your iOS Version
-2. Use the Hexidecimal ECID value
+2. Use the Hexidecimal ECID value.
 3. Scrolling down a bit further will show your "Device Model". This is your board config.
 4. If your device is A12+, Specify The current generator and APNonce.
 

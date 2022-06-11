@@ -31,7 +31,7 @@
 3. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
 
 The output should look similar to this:
-![ssh-cli](assets/sshclioutput.png)
+![ssh-cli](assets/ssh/sshclioutput.png)
 
 #### USB
 
@@ -62,7 +62,7 @@ The output should look similar to this:
 5. run `brew install libimobiledevice`
 6. Connect your iOS device using a cable.
 7. Open a new terminal window using Command+N
-8. In the new window, type: `iproxy 2222 22` and press return. The output should look like this: ![iproxy in terminal](assets/ssh/sshclioutput.png/iproxied.png)
+8. In the new window, type: `iproxy 2222 22` and press return. The output should look like this: ![iproxy in terminal](assets/ssh/iproxied.png)
    - If you are using checkra1n, use port 44 instead of 22.  
 9. Go back to the old terminal window and type `ssh root@localhost -p 2222`
 10. You will be asked for a password. The password will be invisible when entered. Type `alpine` and press enter.
